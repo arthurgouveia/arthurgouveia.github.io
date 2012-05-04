@@ -1,6 +1,13 @@
+author:
+  name: Arthur Gouveia
+  email: arthur.gouveia@gmail.com
+  github: 'https://github.com/arthurgouveia'
+  twitter: 'https://twitter.com/#!/arthurgouveia'
+  linkedin: 'http://www.linkedin.com/in/arthurgouveiaweb'
 markdown: rdiscount
 pygments: true
 permalink: /posts/:title
 auto: true
 rdiscount:
   extensions: [smart]
+regeneration: true

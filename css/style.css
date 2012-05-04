@@ -13,7 +13,7 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::selection { background: #EAEAEA; color: #000; text-shadow: none; }
 
 a { color: #00e; }
-a:visited { color: #551a8b; }
+/*a:visited { color: #551a8b; }*/
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
@@ -66,10 +66,12 @@ td { vertical-align: top; }
 
 body {
   background-color: white;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Droid Serif', Helvetica, Arial, sans-serif;
   font-size:14px;
   line-height: 1.4;
   color: #333;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom:50px;
 }
 
 header {
@@ -91,8 +93,19 @@ a {
 
 p {
   font-size:16px;
-  line-height:25px;
+  line-height:1.7em;
+  margin: 0 0 1.2em 0;
 }
+
+h1, h2, h3 {
+  border-bottom: 1px solid #DDD;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-weight:400;
+}
+
+h1 {font-size:28px;}
+h2 {font-size:22px;}
+h3 {font-size:16px;}
 
 .wrapper {
   width:960px;
@@ -140,8 +153,73 @@ nav {
     padding: 10px 0px 11px 20px;
   }
 
+.social {
+  display: block;
+  width:16px;
+  height:16px;
+  line-height:0;
+  font-size:0;
+  text-indent:-9999px;
+  padding: 0;
+}
 
+  #github {
+    background: url(/img/github.png) no-repeat top center;
+    margin-left: 30px;
+  }
 
+  #twitter {background: url(/img/twitter.png) no-repeat top center;}
+
+  #linkedin {background: url(/img/linkedin.png) no-repeat top center;}
+
+.listing {
+  margin: 0;
+  padding:0;
+}
+
+  .listing li {
+    list-style:none;
+    border-bottom:1px solid #DDD;
+    padding:4px 0;
+    color:#777;
+  }
+
+    .listing li span {
+      display: block;
+      width:120px;
+      float: left;
+      margin-right:8px;
+    }
+
+.heading span {
+  float:right;
+  margin-top:20px;
+  color:#777;
+}
+
+#aboutMe {
+  padding-top:20px;
+  margin-top: 50px;
+  border-top:1px solid #DDD;;
+}
+
+  #gravatarWrapper {
+    float: left;
+    margin-right: 20px;
+  }
+
+  #aboutMe p {
+    font-size:14px;
+    margin-bottom: 0.5em;
+  }
+
+#aboutPic,
+#gravatarWrapper img{
+  padding: 3px;
+  border:1px solid #DDD;
+  margin: 0 0 1.2em 0;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.4),0 0 10px rgba(0,0,0,0.1);
+}
 
 @media only screen and (min-width: 35em) {
   

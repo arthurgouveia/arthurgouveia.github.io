@@ -1,8 +1,14 @@
 ---
 layout: default
-title: "Arthur Gouveia"
+title: 'Arthur Gouveia'
+description: "Web Developer who has fun while trying to create a better world one line of code at a time with Ruby (and Rails), Python and PHP. Defends the front line with HTML5, CSS3 and JavaScript. Lives in João Pessoa, Brazil."
+keywords: "Web Developer Development Ruby on Rails PHP Python HTML XHTML HTML5 CSS CSS3 JS JavaScript João Pessoa Brazil"
 ---
 
-<h1>Home</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis massa quis nisl pretium vulputate sit amet quis arcu. Nulla quis sapien elit, eget rutrum erat. Nullam at nisi sem. Morbi mi arcu, bibendum ac tempus et, consequat quis risus. Integer congue libero ac massa dignissim nec mollis nunc sodales. Nulla iaculis faucibus tortor in lacinia. Mauris quis lacus lectus, nec porta neque. Sed molestie, sapien a aliquet cursus, quam mi ornare dolor, eu convallis orci risus non magna. Curabitur volutpat aliquet urna, nec blandit nisl lobortis pellentesque.</p>
+  <ul class="listing">
+    {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
