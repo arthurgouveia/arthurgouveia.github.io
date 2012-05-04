@@ -25,15 +25,19 @@
 
       <p>Feel free to send him an <a href="mailto:&#097;&#114;&#116;&#104;&#117;&#114;&#046;&#103;&#111;&#117;&#118;&#101;&#105;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">email</a>.
 
+      <p>
 
       {% if page.tweet %}
-        <p>
+
           <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-via="ArthurGouveia" data-text="{{ page.tweet }}" data-url="http://arthurgouveia.com{{ page.url }}" data-count="none">Tweet</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          <a href="https://twitter.com/arthurgouveia" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @ArthurGouveia</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </p>
+
       {% endif %}
+
+        <a href="https://twitter.com/arthurgouveia" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @ArthurGouveia</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </p>
 
     </div>
 
