@@ -11,6 +11,17 @@
 
     {{ content }}
 
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'arthurgouveia';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
     <div id="aboutMe" class="clearfix">
 
       <div id="gravatarWrapper">
@@ -21,9 +32,9 @@
 
       <p>Arthur Gouveia is a Web Developer &amp; a nerdy/geeky person.</p>
 
-      <p>Here's his <a href="{{ site.author.twitter }}">Twitter Profile</a> &amp; his <a href="{{ site.author.github }}">GitHub Stuff</a>.</p>
+      <p>Here's his <a href="{{ site.author.twitter }}" target="_blank">Twitter Profile</a> &amp; his <a href="{{ site.author.github }}" target="_blank">GitHub Stuff</a>.</p>
 
-      <p>Feel free to send him an <a id="email" href="#">email</a>.
+      <p>Feel free to send him an <a id="email" href="#" target="_blank">email</a>.
 
       <p>
 
