@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Zach Holman, Maurício Linhares & GitHub Pages'
+title: 'Zach Holman, Maurício Linhares &amp; GitHub Pages'
 permalink: /2012/05/03/hello-world
 tweet: '@holman, @mauriciojr and Github Pages: how this blog was born'
 description: 'My first post explaining how Zach Holman, Maurício Linhares & GitHub Pages contributed to the whole idea behind this blog'
