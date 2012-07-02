@@ -259,7 +259,8 @@ h3 {
   font-size: 16px; }
 
 .wrapper {
-  width: 960px;
+  width: 940px;
+  padding: 0 10px;
   margin: 0 auto; }
 
 #main {
