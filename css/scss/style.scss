@@ -110,7 +110,7 @@ p {
 }
 
 .wrapper {
-  width:940px;
+  max-width:940px;
   padding:0 10px;
   margin: 0 auto;
 }
@@ -181,18 +181,30 @@ nav {
     padding:4px 0;
     color:#777;
     span {
-      display: block;
+      display: inline-block;
       width:120px;
-      float: left;
       margin-right:8px;
     }
   }
 }
 
-.heading span {
-  float:right;
-  margin-top:20px;
-  color:#777;
+.heading {
+  border-bottom: 1px solid #DDD;
+  margin-bottom:22px;
+  position:relative;
+  h1 {
+    margin-bottom:0;
+    border:none;
+    display:inline-block;
+  }
+  span {
+    display:block;
+    margin-top:20px;
+    color:#777;
+    position:absolute;
+    bottom:-23px;
+    right:0;
+  }
 }
 
 #aboutMe {
@@ -234,6 +246,16 @@ code {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+
+@media screen and (max-device-width: 480px){
+  .listing {
+    li {
+      span {
+        display:block;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 35em) {
