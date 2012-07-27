@@ -85,7 +85,7 @@ To know what Gemset you're using, type:
 This is a file that RVM will generate for you if you want and what it does is automagically switching to a Ruby version with a specific Gemset you defined for that directory it was created in!
 
 <code class="prettyprint">cd dev/socialNetworkFacebookKiller
-rvm --rvmrc --create 1.9.3@socialNetworkFacebookKiller</code>
+rvm \-\-rvmrc \-\-create 1.9.3@socialNetworkFacebookKiller</code>
 
 Now you **cd** outside of this directory and **cd** inside of it again. You should be prompted if you want to use this rvm. Just answer yes and TADA! You will be running the desired Ruby version with the desired Gemset right after you **cd** on the directory
 
