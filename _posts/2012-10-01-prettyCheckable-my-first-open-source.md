@@ -3,7 +3,7 @@ layout: post
 title: 'prettyCheckable: my first open-source, 7 days later'
 permalink: /2012/10/01/prettyCheckable-my-first-open-source
 tweet: 'prettyCheckable: my first open-source, 7 days later'
-description: 'My experience on creating my first open-source project: prettyCheackble. What was great and why you should do the same'
+description: 'My experience on creating my first open-source project: prettyCheckable. What was great and why you should do the same'
 keywords: 'prettyCheckable, jQuery, plugin, JavaScript, Style checkbox, Style radio, CSS radio checkbox'
 ---
 
