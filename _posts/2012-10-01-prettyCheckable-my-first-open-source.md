@@ -31,7 +31,7 @@ This would make me see the bugs, code improvements, etc I didn't see at first. T
 
 As nerdy as it my sound, I **really** liked digging into a new approach to the problem and coding the best I could for the sake of making this plugin as easy, maintainable and customizable as it could be. As I didn't measure time from the beginning since I was just making a one time thing for the first freelance job, so I'm not 100% sure about how much time I used in the process of making it.
 
-The number that comes to my mind when I think back is around 15~20 hours, divided any random days and times. It was used for:
+The number that comes to my mind when I think back is around 15~20 hours, divided in random days and times. It was used for:
 
 + Improving the code I had previously done for replacing the inputs;
 + Researching & fixing problems with overwriting default behavior for HTML elements;
