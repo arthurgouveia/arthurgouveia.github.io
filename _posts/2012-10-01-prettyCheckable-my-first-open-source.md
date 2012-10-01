@@ -36,7 +36,7 @@ The number that comes to my mind when I think back is around 15~20 hours, divide
 + Improving the code I had previously done for replacing the inputs;
 + Researching & fixing problems with overwriting default behavior for HTML elements;
 + Adjusting the original design and creating the new colors;
-+ Testing is on many browsers;
++ Testing it on many browsers;
 + Making it a plugin with jQuery best practices;
 + Creating unit tests with Jasmine;
 + Creating a landing page.
