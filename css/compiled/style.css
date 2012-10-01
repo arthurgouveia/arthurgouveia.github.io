@@ -235,10 +235,13 @@ a {
   text-decoration: none;
   color: #4183c4; }
 
-p {
+p, li {
   font-size: 16px;
   line-height: 1.7em;
   margin: 0 0 1.2em 0; }
+
+li {
+  margin-bottom: 0.4em; }
 
 h1 {
   border-bottom: 1px solid #DDD;
@@ -287,7 +290,9 @@ nav {
   margin-top: 7px; }
   nav ul li {
     float: left;
-    margin-left: 14px; }
+    margin: 0 0 0 14px;
+    font-size: 14px;
+    line-height: 1.4; }
     nav ul li a {
       color: #222;
       -moz-transition: color .15s ease-in 0;

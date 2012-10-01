@@ -94,11 +94,13 @@ a {
   color:$linkColor;
 }
 
-p {
+p, li {
   font-size:16px;
   line-height:1.7em;
   margin: 0 0 1.2em 0;
 }
+
+li {margin-bottom:0.4em}
 
 @each $n in 1,2,3 {
   h#{$n}{
@@ -142,7 +144,9 @@ nav {
   margin-top:7px;
   ul li {
     float: left;
-    margin-left:14px;
+    margin: 0 0 0 14px;
+    font-size:14px;
+    line-height: 1.4;
     a {
       color: #222;
       -moz-transition: color .15s ease-in 0;
