@@ -1,0 +1,45 @@
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>
+  {% if page.title %}
+    {{ page.title }} -
+  {% endif %}
+  {{ site.name }}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="{{ site.name }}" />
+
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:site_name" content="{{ site.name }}"/>
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta property="og:type" content="article" />
+  <meta property="article:author" content="{{ site.name }}" />
+  <meta property="article:publisher" content="{{ site.name }}" />
+
+  {% if page.description %}
+
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}">
+
+  {% else %}
+
+  <meta name="description" content="{{ site.description }}" />
+  <meta property="og:description" content="{{ site.description }}">
+
+  {% endif %}
+
+  {% if page.image %}
+
+  <meta name="og:image" content="{{ site.url }}/assets/images/{{ page.image }}" />
+
+  {% else %}
+
+  <meta name="og:image" content="{{ site.url }}/assets/images/{{ site.image }}" />
+
+  {% endif %}
+
+  <meta name="og:image:width" content="1200" />
+  <meta name="og:image:height" content="630" />

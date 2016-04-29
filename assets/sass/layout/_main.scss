@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: color(background);
+  border-top: 5px solid color(accent);
+  border-bottom: 5px solid color(accent);
+}
+
+.main-container {
+  flex: 1;
+  width: 100%;
+  max-width: rem($breakpoint--desktop-up);
+  padding: rem(15px 20px);
+  margin: 0 auto;
+  font-size: $font-size--medium;
+}

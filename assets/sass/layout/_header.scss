@@ -1,0 +1,20 @@
+$header-max-width: rem(320px);
+
+.main-header {
+  padding: rem(10px 20px);
+}
+
+.author-name {
+  font-family: $font-family--general;
+  font-weight: $font-weight--general;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include media($breakpoint--tablet-up) {
+    display: inline-block;
+    text-align: left;
+  }
+}

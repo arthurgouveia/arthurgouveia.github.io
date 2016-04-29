@@ -1,0 +1,20 @@
+.main-footer {
+  background: color(footer);
+  padding: rem(40 0);
+}
+
+.main-footer__wrapper {
+  @include clearfix;
+  max-width: rem($breakpoint--desktop-up);
+  margin: 0 auto;
+  padding: rem(0 20px);
+}
+
+.copyright {
+  text-align: center;
+
+  @include media($breakpoint--tablet-up) {
+    text-align: left;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,68 @@
+.post {
+  margin-bottom: rem(100px);
+
+  h3,
+  h4 {
+    margin: rem(40px 0 20px);
+
+    code {
+      font-size: inherit;
+    }
+  }
+
+  h3 {
+    font-size: $font-size--large;
+    margin: rem(50px 0 20px 0);
+    border-left: 5px solid color(accent);
+    padding: rem(4px 0 4px 10px);
+  }
+
+  h4 {
+    font-size: $font-size--medium;
+    margin: rem(50px 0 20px 0);
+    border-left: 3px solid color(accent);
+    padding: rem(2px 0 2px 12px);
+  }
+
+  pre {
+    background: darken(color(background), 5%);
+    padding: rem(5px 10px);
+    margin: rem(0 0 20px);
+  }
+
+  p code {
+    padding: rem(5px 10px);
+    background: darken(color(background), 5%);
+  }
+
+  code,
+  pre {
+    font-size: 85%;
+  }
+}
+
+.post__header {
+  margin-bottom: rem(15px);
+}
+
+.post__meta {
+  font-size: $font-size--base;
+}
+
+.post__tags {
+  a {
+    display: inline-block;
+    padding: rem(1px 4px);
+    background: color(accent);
+    color: color(background);
+  }
+}
+
+.post__title {
+  font-size: $font-size--xlarge;
+  margin: rem(20px 0 10px);
+}
+
+.post__footer {
+  margin-top: rem(80px);
+}

@@ -1,0 +1,9 @@
+%container {
+  width: 100%;
+  max-width: rem($breakpoint--desktop-up);
+  margin: 0 auto;
+
+  @include media($breakpoint--tablet-up) {
+    padding: rem(0 16px);
+  }
+}

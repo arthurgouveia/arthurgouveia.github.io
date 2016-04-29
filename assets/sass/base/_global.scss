@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html,
+body {
+  font-size: $font-size--base;
+  font-family: $font-family--general;
+  font-weight: $font-weight--general;
+  line-height: $line-height--default;
+  color: color(content);
+  background: color(accent);
+  letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family--titles;
+  font-weight: $font-weight--bold;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: color(accent);
+  text-decoration: none;
+}
+
+p {
+  margin: rem(0 0 20px);
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

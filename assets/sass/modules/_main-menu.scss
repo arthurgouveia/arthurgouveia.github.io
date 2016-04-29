@@ -1,0 +1,40 @@
+.header__navigation {
+
+  @include media($breakpoint--tablet-up) {
+    float: right;
+  }
+}
+
+.header__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @include media($breakpoint--tablet-up) {
+    text-align: right;
+  }
+}
+
+.header__menu__item {
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+
+  &:hover,
+  &.header__menu__item--active {
+    .header__menu__item__link {
+      color: color(content);
+    }
+  }
+}
+
+.header__menu__item__link {
+  text-decoration: none;
+  display: block;
+  font-size: $font-size--medium;
+  padding: rem(7px 14px);
+
+  .header__menu__item--active & {
+    font-weight: $font-weight--bold;
+  }
+}

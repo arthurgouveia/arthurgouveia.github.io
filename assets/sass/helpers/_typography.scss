@@ -1,0 +1,13 @@
+$font-size--base:     16px;
+$font-size--medium:   rem(20px);
+$font-size--large:    rem(28px);
+$font-size--xlarge:   rem(38px);
+
+$font-family--fallback:  'Helvetica, Arial, sans-serif';
+$font-family--general:   unquote("'Lato', #{$font-family--fallback}");
+$font-family--titles:    unquote("'Lato', #{$font-family--fallback}");
+
+$font-weight--general:   400;
+$font-weight--bold:      900;
+
+$line-height--default: 1.4;

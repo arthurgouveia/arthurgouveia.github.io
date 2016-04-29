@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<header class="post__header">
+    <h2 class="post__title">Posts tagged as #{{ page.tag }}</h2>
+</header>
+
+<section class="post-list">
+    {% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+            {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% if forloop.first %}
+                <div class="post__meta">{{ post_year }}</div>
+            {% endif %}
+
+            {% if forloop.first == false %}
+                {% assign previous_index = forloop.index0 | minus: 1 %}
+                {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
+                {% if post_year != previous_post_year %}
+                    <div class="post__meta">{{ post_year }}</div>
+                {% endif %}
+            {% endif %}
+
+              <article class="post">
+                <header class="post__header">
+                  <h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                  <div class="post__meta">
+                    {{ post.date | date: "%B %e, %Y" }} {% include post_tags.html %}
+                  </div>
+                </header>
+
+                {{ post.excerpt }}
+              </article>
+        {% endfor %}
+    {% else %}
+        <p>There are no posts for this tag.</p>
+    {% endif %}
+</section>

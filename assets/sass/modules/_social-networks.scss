@@ -1,0 +1,32 @@
+.social-networks-list {
+  margin: rem(20px auto 0);
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  display: block;
+
+  @include media($breakpoint--tablet-up) {
+    margin: 0;
+    float: right;
+  }
+}
+
+.social-networks-list__item {
+  display: inline-block;
+  margin: rem(0 10px);
+}
+
+.social-networks-list__link {
+  width: rem(24);
+  height: rem(24);
+  display: block;
+}
+
+.social-networks-list__item__icon {
+  width: 100%;
+  height: 100%;
+
+  path {
+    fill: color(accent);
+  }
+}

@@ -1,0 +1,37 @@
+@mixin media($breakpoint) {
+  @media only screen and (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@function rem($values) {
+  $list: ();
+
+  @each $value in $values {
+    @if $value == 'auto' {
+      $list: append($list, $value);
+    }
+    @else {
+      $list: append($list, (strip-unit($value)/strip-unit($font-size--base)) + rem);
+    }
+  }
+
+  @return $list();
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
