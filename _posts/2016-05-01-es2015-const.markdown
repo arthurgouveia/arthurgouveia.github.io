@@ -1,0 +1,74 @@
+---
+layout: post
+title: 'ES2015 tl;dr; - using const'
+tweet: 'ES2015 tl;dr; - using const'
+description: 'JavaScript const - how to use it'
+keywords: 'front-end, javascript'
+tags: [front-end, javascript]
+---
+
+Here's a mind blowing piece of information: `const` comes from "constant". You're welcome. Now let's dive into more details on how to use it and it's behaviours so that you don't get fooled by thinking it should be used only to things that are immutable.
+
+### `const` is not really "constant"
+
+Although some might get misleaded by the name `const`, it does not indicate it can't be changed:
+
+    const sonsOfNedStark = [];
+    sonsOfNedStark.push('Robb');
+    sonsOfNedStark.push('Sansa');
+    sonsOfNedStark.push('Arya');
+    sonsOfNedStark.push('Bran');
+    sonsOfNedStark.push('Rickon');
+
+    console.log(sonsOfNedStark);
+    // Outputs: ["Robb", "Sansa", "Arya", "Bran", "Rickon"]
+
+On the other hand, what `const` does guarantee you is no new bindings. On the code above, the `const` has a reference to an `Array` and that will never change (or shouldn't as you'll see in a few moments). We're simply modifying the contents of the array, but not rebinding or modifying a value directly:
+
+    const sonsOfNedStark = ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'];
+    sonsOfNedStark = ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'John'];
+    // Chrome and Firefox will output assignment errors
+
+If you wanted to store an object on a `const` but you didn't want it to have the ability to change, you could use `Object.freeze({})` and it would take care of it, tho (imaging your object has only one level of deepness).
+
+### When environments colide
+
+Depending on where you're running your code, you might end with discrepancies on the output of the code.
+
+    const isJohnSnowDead = 'yes';
+    isJohnSnowDead = 'nope';
+
+    console.log(johnSnowStatus());
+    // Chrome: TypeError: Assignment to constant variable.
+    // Firefox: SyntaxError: invalid assignment to const isJohnSnowDead.
+    // Safari 9: Logs 'nope'. <- LOL
+
+### Similarities
+
+Both `const` &amp; `let` have the same behaviour when it comes to hoisting and scope, as explained in [ES2015 tl;dr; - using let](/post/es2015-let/), but the main difference is that `const` has a protective behaviour not allowing the reassignment.
+
+**Hoisting example:**
+
+    console.log(daenerysDragonsStatus);
+    const daenerysDragonsStatus = 'Free';
+
+    // ReferenceError: daenerysDragonsStatus is not defined
+
+**Scope example:**
+
+    const daenerysDragonsStatus = 'Free';
+
+    if (true) {
+      const daenerysDragonsStatus = 'Trapped';
+    }
+
+    console.log(daenerysDragonsStatus);
+    // Outputs: Free
+
+### When to use it
+
+Opinions will be very different among developers, but I'm particularly with [Axel Rauschmayer](http://exploringjs.com/es6/ch_variables.html#const-vs-let-vs-var) and [Mathias Bynens](https://mathiasbynens.be/notes/es6-const#const-vs-let) on this one.
+
+1. Favor **const** over **let** given it's more controlled behaviour;
+2. Use **let** for all things that require storage of values that are passive of change;
+3. **let** **var** live **const**antly in the past. Stahp using it.
