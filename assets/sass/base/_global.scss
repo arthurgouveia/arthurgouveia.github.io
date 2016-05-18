@@ -6,13 +6,17 @@
 
 html,
 body {
-  font-size: $font-size--base;
+  font-size: $font-size--base/1.4;
   font-family: $font-family--general;
   font-weight: $font-weight--general;
   line-height: $line-height--default;
   color: color(content);
   background: color(accent);
   letter-spacing: 0.5px;
+
+  @include media($breakpoint--tablet-up) {
+    font-size: $font-size--base;
+  }
 }
 
 h1,
