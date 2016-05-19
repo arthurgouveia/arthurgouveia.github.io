@@ -1,0 +1,119 @@
+---
+layout: post
+title: 'ES2015 tl;dr; - using functions'
+tweet: 'ES2015 tl;dr; - using functions'
+description: 'JavaScript ES2015 functions - arrow functions, defaults and destructuring'
+keywords: 'front-end, javascript'
+tags: [front-end, javascript]
+image: 'posts/es2015-functions.jpg'
+---
+
+Ever got tired of how weird functions (and everything else) work weird in JavaScript? Well, get used to it, cuz we got a long way ahead, but stuff's getting better, and the functions' improvements are one of the things we can have a toast to.
+
+### 📸🙅 No more `self`-ies
+
+Arrow functions are pretty cool. Aside from less verbosity, they solve a problem that people have been having for quite some time: the `this`. No more `var self = this;` or `bind` everywhere.
+
+    function Cook(name, speed) {
+      this.name = name;
+      this.speed = speed;
+    }
+
+    Cook.prototype.prepareBatch = function () {
+      setTimeout(function () {
+        console.log(this.name + ' finished a batch');
+      }, this.speed);
+    }
+
+    const cook = new Cook('Walter White', 1000);
+    cook.prepareBatch();
+    // logs "undefined finished a batch" after 1 second
+
+By simply changing the `function ()` in the `setTimeout` to `() =>` we're ensuring the `this` has the scope we want:
+
+    setTimeout(() => {
+      console.log(this.name + ' finished a batch');
+    }, this.speed);
+    // this time we'll get "Walter White finished a batch"
+
+This is due to **lexical binding**, which means it gets bound to the scope where it was first defined and not to the actual function usage. Since we added it to `Cook` object, then the scope is bound to it's instance.
+
+### Defaults have arrived 🎉
+
+Long has been the time when we needed to check if the argument was indeed passed and if not, assign it something so that tears don't stream down our faces. ES2015 finally allowed us to use the defaults we so longed for:
+
+    function Cook(name, speed = 5000) {
+      this.name = name;
+      this.speed = speed;
+    }
+
+    const cook = new Cook('Jesse Pinkman');
+    console.log(cook);
+    // logs "Cook { name: 'Jesse Pinkman', speed: 5000 }"
+
+Another example that would trigger errors back in the day given that we pass no params to a function that relies on an array being given:
+
+    function addIngredients (ingredientsList = []) {
+      // this would trigger an error
+      // since one "cannot read length of undefined"
+      for (let i = ingredientsList.length - 1; i >= 0; i--) {
+        console.log('Pour ' + ingredientsList[i]);
+      }
+    }
+
+    addIngredients(); // Outputs nothing
+    addIngredients([
+      'Methylamine',
+      'Acetic acid',
+      'Phenyl acetic acid'
+    ]);
+    // Outputs three times "Pour [ingredient name here]"
+
+
+### Destructuring basics and named parameters
+
+First off, let's start by presenting the common concept of constructing &amp; extracting:
+
+    const cook = {};
+    cook.name = 'Walter White';
+    cook.speed = 1000;
+    // object constructed
+
+    let currentCookName = cook.name;
+    let currentCookSpeed = cook.speed;
+    // extracting information from object
+
+Now **destructuring** allows us to extract the information for sources given their structure, therefore giving us **real** multiple left-hand assignment:
+
+    let [mainCook, assistantCook] = ['Walter White', 'Jesse Pinkman'];
+    console.log(mainCook, assistantCook);
+    // logs "Walter White Jesse Pinkman"
+
+If you're using names on your left-hand assignment to map to the source properties, you can get the info you need regardless of the order they appear:
+
+    let {speed, name} = cook; // equivalent to `let {speed: speed, name: name}`
+    console.log(speed, name);
+    // logs "1000 'Walter White'"
+
+    let {speed: currentCookSpeed, name: currentCookName} = cook;
+    console.log(currentCookSpeed, currentCookName);
+    // logs "1000 'Walter White'"
+
+Putting it all together to allow your `function` to receive named and optional parameters aside from default values:
+
+    function printCookDetails({name, speed = 3000} = {}) {
+      console.log(name + ' cooks one batch every ' + speed/1000 + ' second(s)');
+    }
+
+    printCookDetails({speed: 5000, name: 'Jesse Pinkman'});
+    //logs "Jesse Pinkman cooks one batch every 5 seconds"
+
+    printCookDetails({name: 'Gale Boetticher'});
+    //logs "Gale Boetticher cooks one batch every 3 seconds"
+
+    printCookDetails(cook);
+    //logs "Walter White cooks one batch every 1 seconds"
+
+Hopefully this will help you out a bit. Next in line is a short post about **Rest Parameters and Spread Operators**.
+
+<small>[Facebook sharing image]({{ site.url }}/assets/images/{{ page.image }}) credits: [Breaking Bad Generator](http://sbll.org/breakingbad/)</small>
