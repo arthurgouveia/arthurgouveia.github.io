@@ -1,6 +1,6 @@
 - title: Posts
-  url: '/index.html'
+  url: '/'
 - title: Labs
-  url: '/labs.html'
+  url: '/labs'
 - title: About
-  url: '/about.html'
+  url: '/about'
