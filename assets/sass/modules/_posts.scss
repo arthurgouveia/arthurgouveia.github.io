@@ -27,7 +27,7 @@
   pre {
     background: darken(color(background), 5%);
     padding: rem(10px);
-    margin: rem(0 0 20px);
+    margin: rem(20px 0 0);
   }
 
   p code {
@@ -40,6 +40,18 @@
     font-size: 85%;
     line-height: ($line-height--default*85)/100;
     -webkit-overflow-scrolling: touch;
+  }
+
+  blockquote {
+    background: darken(color(background), 5%);
+    padding: rem(25px);
+    margin: rem(20px 0 0);
+    font-style: italic;
+
+    cite {
+      display: block;
+      text-align: right;
+    }
   }
 }
 
