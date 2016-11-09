@@ -11,14 +11,16 @@ image: 'posts/a11y-to.jpg'
 On November 5th, 2016, I attended to a super cool event full of brilliant people in Toronto: "#a11yTO - Accessibility Toronto Camp". Was super enlightening and at the same time great for validating some ideas and practices I've been acquiring/doing through my time working with accessibility. I figured that dumping the notes I got there would be a good thing for further reference, so here it is.
 
 ### Opening notes
-- Focusing on getting value out of people participating. Create evangelists - spread the word.
+- Focusing on getting value out of people participating.
+  - Create evangelists - spread the word.
 - a11yTO - largest a11y camp in the world
 - There will be a conference on 2017
 - Camp will be happening as usual, yearly, around the same time
 - Next year, the meet-ups will be sort of made with a curriculum. Walk people through a11y through the year
 - Conferences will be specially focused on training folks
-- a11y is not only the right thing, not only legal obligation, is a force for positive change, sort of new ideas and catalyst for innovation
-- Government is highly interested into making an effort for a better a11y. PM appointed the first "minister of a11y" and is personally involved on the efforts
+- a11y is not only the right thing, not only legal obligation, is a force for positive change, source of new ideas and catalyst for innovation
+- Government is highly interested into making an effort for a better a11y.
+  - PM appointed the first "minister of a11y" and is personally involved on the efforts
 - [Johnny Taylor](http://ajohnnytaylor.org/) - presented using a text reader. Interested to see he's using a MacBook.
   - Almost cried here. Big heart punch
   - Locked-in syndrome
@@ -28,15 +30,15 @@ On November 5th, 2016, I attended to a super cool event full of brilliant people
 ### Mobilizing Web Accessibility - [Seth Holladay](http://www.seth-holladay.com/)
 
 - Packed. Not enough seats
-- www.sitecues.com - Bought by the JAWS company, apparently
-- Wrong understanding that people use Desktop over Mobile
+- [sitecues](http://www.sitecues.com) - Bought by the JAWS company, apparently
+- Wrong understanding that people with disabilities use Desktop over Mobile
 - "Variation between device and OS is massive"
   - Slows the development process very much due to the lack of standards
 - Operating environment plays a huge part on Accessibility. Glare on the screen, noisy metro, etc.
 - "Assistive tech is VoiceOver or TalkBack, not JAWS or ZoomText"
   - VoiceOver is great at reading out the screen
   - Not as many people are familiar with the Android tools
-  - Could not get where he wanted to get with JAWS not being assistive tech but VoiceOver and TalkBack being
+  - Could not get why he stated that JAWS is not assistive tech but VoiceOver and TalkBack are
 - Reactions to problems
   - 2/3 of people will use the website less or not at all if they find it hard to use
   - 1/3 will look for another competitor
